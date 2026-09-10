@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #1A2B3C;
+  --sand: #F0F4F8;
+  --sand-dim: #E2EAF0;
+  --pacific: #2C4A6B;
+  --reef: #3D6B8E;
+  --lava: #b5563b;
+  --gold: #5B8BAE;
+  --line: #D0DCE5;
+  --white: #ffffff;
+  --mint: #A8C4D8;
+
+  /* Theme-aware semantic tokens (light defaults) */
+  --page-bg: #F0F4F8;
+  --card-bg: #ffffff;
+  --card-border: #D0DCE5;
+  --card-shadow: 0 1px 3px rgba(18, 38, 34, 0.06);
+  --hero-bg: linear-gradient(135deg, #2C4A6B 0%, #243D5A 100%);
+  --hero-border: transparent;
+  --primary-text: #1A2B3C;
+  --secondary-text: #1A2B3C99;
+  --muted-text: #1A2B3C80;
+  --header-bg: linear-gradient(135deg, #2C4A6B 0%, #243D5A 55%, #1B3050 100%);
+  --header-subtitle: #D0E0EE;
+  --header-eyebrow: #A8C4D8;
+  --header-badge-bg: #ffffff;
+  --header-badge-text: #2C4A6B;
+  --inactive-tab-text: #A0B8C8;
+  --active-tab-bg: rgba(168,196,216,0.12);
+  --active-tab-border: rgba(168,196,216,0.5);
+  --active-tab-num-bg: #A8C4D8;
+  --active-tab-num-text: #1B3050;
+  --inactive-tab-num-border: rgba(168,196,216,0.6);
+  --inactive-tab-num-text: #A8C4D8;
+  --active-tab-text: #ffffff;
+  --toggle-active-bg: #2C4A6B;
+  --toggle-active-text: #ffffff;
+  --toggle-active-border: #2C4A6B;
+  --toggle-inactive-bg: #ffffff;
+  --toggle-inactive-text: #1A2B3C;
+  --toggle-inactive-border: #D0DCE5;
+  --note-bg: #E2EAF0;
+  --note-text: #1A2B3C99;
+  --note-border: #D0DCE5;
+  --slider-track: #D0DCE5;
+  --slider-thumb-border: #ffffff;
+  --scrollbar-thumb: #D0DCE5;
+  --scrollbar-hover: #3D6B8E;
+  --ocean-bg: #E2EAF0;
+  --ocean-bg2: #F0F4F8;
+  --legend-inactive-bg: #ffffff;
+  --legend-inactive-text: #1A2B3C;
+}
+
+.dark {
+  --ink: #F1F5F9;
+  --sand: #0B1420;
+  --sand-dim: #16212F;
+  --pacific: #4C7FB0;
+  --reef: #3D6B8E;
+  --lava: #B5563B;
+  --gold: #5B8BAE;
+  --line: #2A3B4D;
+  --white: #16212F;
+  --mint: #A8C4D8;
+
+  --page-bg: #0B1420;
+  --card-bg: #16212F;
+  --card-border: #2A3B4D;
+  --card-shadow: none;
+  --hero-bg: #1C3A5E;
+  --hero-border: #2A4A6E;
+  --primary-text: #F1F5F9;
+  --secondary-text: #7C8CA0;
+  --muted-text: #7C8CA0;
+  --header-bg: linear-gradient(135deg, #16283F, #101D30);
+  --header-subtitle: #93A4B8;
+  --header-eyebrow: #7FA3C7;
+  --header-badge-bg: #1F3350;
+  --header-badge-text: #DCE8F5;
+  --inactive-tab-text: #7FA3C7;
+  --active-tab-bg: #1F3350;
+  --active-tab-border: #35507A;
+  --active-tab-num-bg: #35507A;
+  --active-tab-num-text: #DCE8F5;
+  --inactive-tab-num-border: #35507A;
+  --inactive-tab-num-text: #7FA3C7;
+  --active-tab-text: #DCE8F5;
+  --toggle-active-bg: #1F3350;
+  --toggle-active-text: #F1F5F9;
+  --toggle-active-border: #35507A;
+  --toggle-inactive-bg: #16212F;
+  --toggle-inactive-text: #93A4B8;
+  --toggle-inactive-border: #2A3B4D;
+  --note-bg: #16212F;
+  --note-text: #7C8CA0;
+  --note-border: #2A3B4D;
+  --slider-track: #2A3B4D;
+  --slider-thumb-border: #16212F;
+  --scrollbar-thumb: #2A3B4D;
+  --scrollbar-hover: #4C7FB0;
+  --ocean-bg: #101D30;
+  --ocean-bg2: #16283F;
+  --legend-inactive-bg: #16212F;
+  --legend-inactive-text: #93A4B8;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--primary-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-data {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+/* Hide scrollbar for TOC pill row on mobile */
+.toc-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.toc-no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ensure scroll target headings aren't hidden behind sticky header */
+h3 {
+  scroll-margin-top: 90px;
+}
+
+/* Chart canvas responsive */
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Range sliders */
+input[type='range'].ruc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--slider-track);
+  outline: none;
+}
+input[type='range'].ruc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--pacific);
+  border: 3px solid var(--slider-thumb-border);
+  box-shadow: 0 1px 4px rgba(18, 38, 34, 0.25);
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+input[type='range'].ruc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type='range'].ruc-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--pacific);
+  border: 3px solid var(--slider-thumb-border);
+  box-shadow: 0 1px 4px rgba(18, 38, 34, 0.25);
+  cursor: pointer;
+}
