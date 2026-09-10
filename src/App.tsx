@@ -33,6 +33,11 @@ export default function App() {
         <p className="font-body text-[11.5px] leading-relaxed" style={{ color: 'var(--secondary-text)', maxWidth: 900 }}>
           <span className="font-semibold" style={{ color: 'var(--pacific)' }}>Data source:</span> Revenue figures are derived from the HDOT AFV Report, covering actual HIRUC collections (FY2026, Jul 2025–Jun 2026) and program enrollment forecasts (FY2027–FY2040). Fee-type breakdowns, county distributions, and vehicle class data are sourced from the same report. Forecast projections assume current fee rates remain constant.
         </p>
+        <div className="font-body text-[11.5px] leading-relaxed mt-3" style={{ color: 'var(--secondary-text)', maxWidth: 900 }}>
+          <span className="font-semibold" style={{ color: 'var(--pacific)' }}>Project developed by:</span> Caleb Lau, Roxane Ruan<br />
+          Planning, Programming, &amp; Budgeting Department<br />
+          Hawai'i Department of Transportation
+        </div>
       </footer>
     </div>
   );
